@@ -1,11 +1,20 @@
 Package: nkmap
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Drawing map with naver static map 
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Subin Jo
+Maintainer: The package maintainer <vgd2469@gmail.com>
+Description: Draw map with naver static map.
+    you can use category or name of that place also you can use lon, lat or address.
+    you can use geocode with naver api or kakao api.
+Depends: 
+ R (>= 3.4.1),
+ ggmap,
+ jpeg,
+ png,
+ jsonlite,
+ httr,
+ tidyverse
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
