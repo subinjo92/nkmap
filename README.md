@@ -9,5 +9,9 @@
 ## Installation
 
 devtools를 이용해 install_github함수를 쓰면 편리하게 설치할 수 있습니다.
+
+
 devtools::install_github("subinjo92/nkmap")
+
+
 library('nkmap')
