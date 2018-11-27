@@ -74,7 +74,7 @@ markers 또는 markers_ab는 위경도값이 들어가며 지도위에 체크나
 
 naver url, client id, secret이 필요하며, kakao REST API키가 필요합니다.  
 
-##참고할수 있는 사이트
+## 참고할수 있는 사이트
 https://developers.naver.com/docs/map/tutorial/  
 https://developers.kakao.com/docs/restapi/local#%ED%82%A4%EC%9B%8C%EB%93%9C-%EA%B2%80%EC%83%89  
 
