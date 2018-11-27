@@ -20,16 +20,16 @@ library('nkmap')
 ### file_drawer
 ggmap 패키지의 내부 utility function으로 다른 함수의 내부에서 돌아가기 위해 추가한 함수입니다.
 
-###getBorderLonLat
+### getBorderLonLat
 기존 ggmap 내부의 get_navermap함수내에 있던 함수로 get_kakao_navermap함수가 작동하기 위해 추가했습니다.
 
-###geocode_naver
+### geocode_naver
 naver api를 이용한 geocode로 주소와 naver client id와 secret을 입력해줘야 사용가능합니다.
 
-###geocode_kakao
+### geocode_kakao
 kakao api를 이용한 geocode로 주소와 REST API키값을 입력해야 합니다.
 
-###geocode_keyword_kakao
+### geocode_keyword_kakao
 kakao api를 이용한 geocode이며 주소가 아닌 건물명, 지명으로 검색이 가능합니다. REST API키값을 입력해줘야 사용가능합니다.
 검색의 정확도를 높이기 위해 category_group_code를 입력할 수 있습니다.  
 
@@ -59,7 +59,7 @@ PM9	약국
 rect는 사각형 범위내에서 제한 검색을 위한 좌표. 지도 화면 내 검색시 등 제한 검색에서 사용가능.
 좌측X좌표,좌측Y좌표,우측X좌표,우측Y좌표 형식.  
 
-###get_kakao_navermap
+### get_kakao_navermap
 center에는 위경도, 주소 또는 지명을 넣을 수 있습니다. 위경도로 입력할시 keyword와 address를 FALSE로 주어야합니다.
 주소로 입력시 keyword를 FALSE로 주고 address를 TRUE로 주면 됩니다.
 지명으로 검색할 시 keyword를 TRUE로 주고 address를 FALSE로 주면 됩니다.  
@@ -74,8 +74,8 @@ markers 또는 markers_ab는 위경도값이 들어가며 지도위에 체크나
 
 naver url, client id, secret이 필요하며, kakao REST API키가 필요합니다.  
 
-참고할수 있는 사이트
-Visit https://developers.naver.com/docs/map/tutorial/  
-Visit https://developers.kakao.com/docs/restapi/local#%ED%82%A4%EC%9B%8C%EB%93%9C-%EA%B2%80%EC%83%89  
+##참고할수 있는 사이트
+https://developers.naver.com/docs/map/tutorial/  
+https://developers.kakao.com/docs/restapi/local#%ED%82%A4%EC%9B%8C%EB%93%9C-%EA%B2%80%EC%83%89  
 
 
