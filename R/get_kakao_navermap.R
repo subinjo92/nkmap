@@ -1,3 +1,39 @@
+#'Get NAVER map and use KAKAO api
+#'
+#'get_kakao_navermap will get NAVER Static map and it use NAVER Static map api
+#'you can use diameter, nomination or address.
+#'you can use this function when you have id and secret
+#'https://developers.naver.com/main/
+#'
+#' @param center the center of map, you can use diameter, nomination or address
+#' @param zoom map zoom, it is 1~14 integer
+#' @param size rectangular dimension in map
+#' @param format image format
+#' @param crs "EPSG:4326" is default
+#' @param baselayer you can select "satelite" or "default"
+#' @param colors color or black-white
+#' @param overlayer you can use "anno_satellite","bicycle", "roadview", "traffic".
+#' @param markers data.frame with first column longitude, second column latitude, markers displayed in map
+#' @param markers_ab same as markers but it will show alphabets
+#' @param naver_key NAVER api client id
+#' @param url_2 NAVER register url
+#' @param keyword if you use nomination then you input TRUE
+#' @param address if you use address then you input TRUE, then you should input keyword FALSE, when you use diameter you should input FALSE for keyword and address
+#' @param kakao_key KAKAO REST api key
+#' @param naver_secret NAVER api client secret
+#' @param category_group_code you can narrow range you can reference code at https://github.com/subinjo92/nkmap
+#' @param messaging turn messaging on.off
+#' @param urlonly return url only
+#' @param force if the map is on local file, should a new map be looked up or not
+#' @param where where shoul the tile drawer be located
+#' @param archiving use archived maps by changing to TRUE you agree to abide by any of the rules governing caching naver maps
+#' @return NAVER static map
+#' @example
+#' ggmap(get_kakao_navermap(center = c(lon = 126, lat = 35), zoom = 3, naver_key = naver_key, url_2 = url_2, keyword = F, address = F, kakao_key = kakao_key, naver_secret = naver_secret, baselayer ='satellite', overlayer = c("anno_satellite", 'traffic')))
+#' ggmap(get_kakao_navermap(center = 'address', zoom = 10, naver_key = naver_key, url_2 = url_2, keyword = F, address = T, kakao_key = kakao_key, naver_secret = naver_secret, baselayer ='satellite', overlayer = c("anno_satellite", 'traffic')))
+#'ggmap(get_kakao_navermap(center = 'nomination', zoom = 10, naver_key = naver_key, url_2 = url_2, keyword = T, address = F, kakao_key = kakao_key, naver_secret = naver_secret, baselayer ='satellite', overlayer = c("anno_satellite", 'traffic')))
+#' @export
+
 get_kakao_navermap <- function (center = c(lon = 126.9849208, lat = 37.5664519), zoom = 4,
                                 size = c(640, 640), format = c("png", "jpeg", "jpg"),
                                 crs = c("EPSG:4326", "NHN:2048", "NHN:128", "EPSG:4258",

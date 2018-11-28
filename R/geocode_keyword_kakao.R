@@ -1,3 +1,19 @@
+#'Geocode from KAKAO using keyword
+#'
+#'geocode_keyword_kakao will get longitude and latitude from KAKAO api.
+#'it will use nomination or building name
+#'it will narrow range by category_group_code or radius.
+#'
+#' @param keyword it use nomination that you want to know it`s latitude and longitude
+#' @param kakao_key you must input your KAKAO REST API key
+#' @param category_group_code tou can input this to narrow range
+#' @param radius you can input this to narrow range and the center of range is lon and lat
+#' @return latitude and longitude
+#' @example
+#' geocode_keyword_kakao(keyword = 'keyword', kakao_key = kakao_key, category_group_code = 'SC4')
+#' geocode_keyword_kakao(keyword = '성균관대학교', kakao_key = kakao_key, lon = 126.99, lat = 37.58, radius = 1000)
+#' @export
+
 geocode_keyword_kakao <- function (keyword, kakao_key, category_group_code, lon, lat, radius, rect) {
 
   if (is.character(keyword) == F){
