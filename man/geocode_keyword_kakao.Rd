@@ -24,3 +24,7 @@ geocode_keyword_kakao will get longitude and latitude from KAKAO api.
 it will use nomination or building name
 it will narrow range by category_group_code or radius.
 }
+\examples{
+  geocode_keyword_kakao(keyword = 'keyword', kakao_key = kakao_key, category_group_code = 'SC4')
+  geocode_keyword_kakao(keyword = '성균관대학교', kakao_key = kakao_key, lon = 126.99, lat = 37.58, radius = 1000)
+}

@@ -5,7 +5,7 @@
 #' @param address address that you want to know it`s longitude and latitude
 #' @param kakao_key you must input your KAKAO REST API key
 #' @return longitude and latitude
-#' @example
+#' @examples
 #'   geocode_kakao('address', kakao_key)
 #' @export
 

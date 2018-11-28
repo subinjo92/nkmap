@@ -28,7 +28,7 @@
 #' @param where where shoul the tile drawer be located
 #' @param archiving use archived maps by changing to TRUE you agree to abide by any of the rules governing caching naver maps
 #' @return NAVER static map
-#' @example
+#' @examples
 #'   ggmap(get_kakao_navermap(center = c(lon = 126, lat = 35), zoom = 3, naver_key = naver_key, url_2 = url_2, keyword = F, address = F, kakao_key = kakao_key, naver_secret = naver_secret, baselayer ='satellite', overlayer = c("anno_satellite", 'traffic')))
 #'   ggmap(get_kakao_navermap(center = 'address', zoom = 10, naver_key = naver_key, url_2 = url_2, keyword = F, address = T, kakao_key = kakao_key, naver_secret = naver_secret, baselayer ='satellite', overlayer = c("anno_satellite", 'traffic')))
 #'   ggmap(get_kakao_navermap(center = 'nomination', zoom = 10, naver_key = naver_key, url_2 = url_2, keyword = T, address = F, kakao_key = kakao_key, naver_secret = naver_secret, baselayer ='satellite', overlayer = c("anno_satellite", 'traffic')))

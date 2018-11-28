@@ -5,7 +5,7 @@
 #'
 #' @param package package name that you want to install and require
 #' @param use you want to require or not, if TRUE it will require the package
-#' @example
+#' @examples
 #'   use_package('ggmap')
 #' @export
 

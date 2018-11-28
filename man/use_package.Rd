@@ -15,3 +15,6 @@ use_package(package, use = TRUE)
 when you use this function you can do install and require at once
 for installed packages, it only do require
 }
+\examples{
+  use_package('ggmap')
+}
