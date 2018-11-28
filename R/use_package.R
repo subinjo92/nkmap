@@ -5,3 +5,4 @@ use_package <- function (package, use = TRUE) {
   if (use)
     require(package, character.only = TRUE)
 }
+
