@@ -31,3 +31,4 @@ geocode_naver <- function (address, naver_key, naver_secret) {
   colnames(item$point) <- c('lon', 'lat')
   item$point
 }
+
