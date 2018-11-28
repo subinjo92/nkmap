@@ -1,4 +1,4 @@
-getBorderLonLat <- function (center_lon, center_lat, zoom, xpix, ypix) {
+get_border_lon_lat <- function (center_lon, center_lat, zoom, xpix, ypix) {
   zoom_res <- c(2048, 1024, 512, 256, 128, 64,  32,16,8,4,2,1,0.5,0.25)
   width_meter <- zoom_res[zoom] * xpix
   height_meter <- zoom_res[zoom] * ypix
