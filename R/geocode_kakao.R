@@ -1,3 +1,14 @@
+#' Geocode from KAKAO
+#'
+#' geocode_kakao function will get longitude and latitude from KAKAO api.
+#'
+#' @param address address that you want to know it`s longitude and latitude
+#' @param kakao_key you must input your KAKAO REST API key
+#' @return longitude and latitude
+#' @example
+#' geocode_kakao('종로구 혜화동', kakao_key)
+#' @export
+
 geocode_kakao <- function (address, kakao_key) {
 
   #주소의 형식이 제대로 들어왔는지 확인
