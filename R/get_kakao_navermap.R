@@ -223,7 +223,7 @@ get_kakao_navermap <- function (center = c(lon = 126.9849208, lat = 37.5664519),
     dim(map) <- mapd[1:2]
   }
   class(map) <- c("ggmap", "raster")
-  ll <- getBorderLonLat(center[1], center[2], zoom, size[1],
+  ll <- get_border_lon_lat(center[1], center[2], zoom, size[1],
                         size[2])
   attr(map, "bb") <- data.frame(ll.lat = ll[2], ll.lon = ll[1],
                                 ur.lat = ll[4], ur.lon = ll[3])
