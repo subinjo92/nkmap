@@ -10,8 +10,8 @@
 #' @param radius you can input this to narrow range and the center of range is lon and lat
 #' @return latitude and longitude
 #' @example
-#' geocode_keyword_kakao(keyword = 'keyword', kakao_key = kakao_key, category_group_code = 'SC4')
-#' geocode_keyword_kakao(keyword = '성균관대학교', kakao_key = kakao_key, lon = 126.99, lat = 37.58, radius = 1000)
+#'   geocode_keyword_kakao(keyword = 'keyword', kakao_key = kakao_key, category_group_code = 'SC4')
+#'   geocode_keyword_kakao(keyword = '성균관대학교', kakao_key = kakao_key, lon = 126.99, lat = 37.58, radius = 1000)
 #' @export
 
 geocode_keyword_kakao <- function (keyword, kakao_key, category_group_code, lon, lat, radius, rect) {

@@ -6,7 +6,7 @@
 #' @param package package name that you want to install and require
 #' @param use you want to require or not, if TRUE it will require the package
 #' @example
-#' use_package('ggmap')
+#'   use_package('ggmap')
 #' @export
 
 #package의 설치와 불러오는것을 동시에 해주는 함수
