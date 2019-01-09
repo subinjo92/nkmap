@@ -21,7 +21,12 @@ geocode_keyword_kakao <- function (keyword, kakao_key, category_group_code, lon,
   }
 
   #kakao api가 원하는 url로 encoding
-  enc_keyword <- URLencode(iconv(keyword, to="UTF-8"))
+  if (Encoding(keyword) == "UTF-8"){
+    enc_address <- URLencode(keyword)
+  }
+  if (Encoding(keyword) != "UTF-8"){
+    enc_address <- URLencode(iconv(keyword, localeToCharset()[1], to = "UTF-8"))
+  }
   url <- "https://dapi.kakao.com/v2/local/search/keyword.json?"
 
   url_fed_to_get <- paste0(url, "query=", enc_keyword)

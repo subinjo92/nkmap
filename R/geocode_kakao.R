@@ -17,7 +17,12 @@ geocode_kakao <- function (address, kakao_key) {
   }
 
   #kakao api에서 요구하는 형식으로 주소를 encoding 함
-  enc_address <- URLencode(iconv(address, to="UTF-8"))
+  if (Encoding(address) == "UTF-8"){
+    enc_address <- URLencode(address)
+  }
+  if (Encoding(address) != "UTF-8"){
+    enc_address <- URLencode(iconv(address, localeToCharset()[1], to = "UTF-8"))
+  }
   url <- "https://dapi.kakao.com/v2/local/search/address.json"
   url_fed_to_get <- paste0(url, "?query=", enc_address)
 
