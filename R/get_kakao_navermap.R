@@ -1,6 +1,6 @@
 #'Get NAVER map and use KAKAO api
 #'
-#'get_kakao_navermap will get NAVER Static map and it use NAVER Static map api
+#'get_kakao_navermap will get NAVER Static map and it use NAVER Static map api.
 #'you can use diameter, nomination or address.
 #'you can use this function when you have id and secret
 #'https://developers.naver.com/main/
@@ -16,7 +16,7 @@
 #' @param markers data.frame with first column longitude, second column latitude, markers displayed in map
 #' @param markers_ab same as markers but it will show alphabets
 #' @param naver_key NAVER api client id
-#' @param url_2 NAVER register url
+#' @param url_2 NAVER register url, default is http://naver.com. you should input your url if you have different url
 #' @param keyword if you use nomination then you input TRUE
 #' @param address if you use address then you input TRUE, then you should input keyword FALSE, when you use diameter you should input FALSE for keyword and address
 #' @param kakao_key KAKAO REST api key
@@ -30,7 +30,7 @@
 #' @return NAVER static map
 #' @examples
 #'   ggmap(get_kakao_navermap(center = c(lon = 126, lat = 35), zoom = 3, naver_key = naver_key, url_2 = url_2, keyword = F, address = F, kakao_key = kakao_key, naver_secret = naver_secret, baselayer ='satellite', overlayer = c("anno_satellite", 'traffic')))
-#'   ggmap(get_kakao_navermap(center = 'address', zoom = 10, naver_key = naver_key, url_2 = url_2, keyword = F, address = T, kakao_key = kakao_key, naver_secret = naver_secret, baselayer ='satellite', overlayer = c("anno_satellite", 'traffic')))
+#'   ggmap(get_kakao_navermap(center = 'address', zoom = 10, naver_key = naver_key, keyword = F, address = T, kakao_key = kakao_key, naver_secret = naver_secret, baselayer ='satellite', overlayer = c("anno_satellite", 'traffic')))
 #'   ggmap(get_kakao_navermap(center = 'nomination', zoom = 10, naver_key = naver_key, url_2 = url_2, keyword = T, address = F, kakao_key = kakao_key, naver_secret = naver_secret, baselayer ='satellite', overlayer = c("anno_satellite", 'traffic')))
 #' @export
 
@@ -42,8 +42,8 @@ get_kakao_navermap <- function (center = c(lon = 126.9849208, lat = 37.5664519),
                                 baselayer = c("default", "satellite"), color = c("color", "bw"),
                                 overlayers = c("anno_satellite", "bicycle",
                                                "roadview", "traffic"),
-                                markers, markers_ab, naver_key, url_2,
-                                keyword = TRUE, address = FALSE,
+                                markers, markers_ab, naver_key, url_2 = 'http://naver.com',
+                                keyword = FALSE, address = FALSE,
                                 kakao_key, naver_secret, category_group_code,
                                 filename = "ggmapTemp", messaging = FALSE, urlonly = FALSE,
                                 force = FALSE, where = tempdir(), archiving = TRUE, ...)
