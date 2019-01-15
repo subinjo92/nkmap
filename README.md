@@ -68,7 +68,12 @@ zoom은 확대할 단위이며 1 ~ 14까지입니다.
 
 baselayer는 일반지도로 그릴 수 있으며 satellite를 입력하면 위성사진입니다.  
 
-overlayer는 "anno_satellite", "bicycle", "roadview", "traffic" 종류가 있습니다.  
+overlayer는 "anno_satellite", "bicycle", "roadview", "traffic" 종류가 있습니다. 
+default 는 4가지 모두 표시되는 것이고, 입력하게 되면 입력 받은 종류만 지도위에 표시됩니다.
+- anno_satellite : 위성 오버레이 지도(위성 지도용으로 사용하는 텍스트, 도로선, 아이콘을 겹친 오버레이 지도) 
+- bicycle : 자전거 오버레이 지도 
+- roadview : 거리뷰 오버레이 지도 
+- traffic : 실시간 교통 오버레이 지도 
 
 markers 또는 markers_ab는 위경도값이 들어가며 지도위에 체크나 알파벳으로 특정지점을 표시할 수 있습니다.  
 
