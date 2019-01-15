@@ -10,10 +10,11 @@ get_kakao_navermap(center = c(lon = 126.9849208, lat = 37.5664519),
   "EPSG:2096", "EPSG:2097", "EPSG:2098", "EPSG:900913"),
   baselayer = c("default", "satellite"), color = c("color", "bw"),
   overlayers = c("anno_satellite", "bicycle", "roadview", "traffic"),
-  markers, markers_ab, naver_key, url_2, keyword = TRUE,
-  address = FALSE, kakao_key, naver_secret, category_group_code,
-  filename = "ggmapTemp", messaging = FALSE, urlonly = FALSE,
-  force = FALSE, where = tempdir(), archiving = TRUE, ...)
+  markers, markers_ab, naver_key, url_2 = "http://naver.com",
+  keyword = FALSE, address = FALSE, kakao_key, naver_secret,
+  category_group_code, filename = "ggmapTemp", messaging = FALSE,
+  urlonly = FALSE, force = FALSE, where = tempdir(),
+  archiving = TRUE, ...)
 }
 \arguments{
 \item{center}{the center of map, you can use diameter, nomination or address}
@@ -34,7 +35,7 @@ get_kakao_navermap(center = c(lon = 126.9849208, lat = 37.5664519),
 
 \item{naver_key}{NAVER api client id}
 
-\item{url_2}{NAVER register url}
+\item{url_2}{NAVER register url, default is http://naver.com. you should input your url if you have different url}
 
 \item{keyword}{if you use nomination then you input TRUE}
 
@@ -64,13 +65,13 @@ get_kakao_navermap(center = c(lon = 126.9849208, lat = 37.5664519),
 NAVER static map
 }
 \description{
-get_kakao_navermap will get NAVER Static map and it use NAVER Static map api
+get_kakao_navermap will get NAVER Static map and it use NAVER Static map api.
 you can use diameter, nomination or address.
 you can use this function when you have id and secret
 https://developers.naver.com/main/
 }
 \examples{
   ggmap(get_kakao_navermap(center = c(lon = 126, lat = 35), zoom = 3, naver_key = naver_key, url_2 = url_2, keyword = F, address = F, kakao_key = kakao_key, naver_secret = naver_secret, baselayer ='satellite', overlayer = c("anno_satellite", 'traffic')))
-  ggmap(get_kakao_navermap(center = 'address', zoom = 10, naver_key = naver_key, url_2 = url_2, keyword = F, address = T, kakao_key = kakao_key, naver_secret = naver_secret, baselayer ='satellite', overlayer = c("anno_satellite", 'traffic')))
+  ggmap(get_kakao_navermap(center = 'address', zoom = 10, naver_key = naver_key, keyword = F, address = T, kakao_key = kakao_key, naver_secret = naver_secret, baselayer ='satellite', overlayer = c("anno_satellite", 'traffic')))
   ggmap(get_kakao_navermap(center = 'nomination', zoom = 10, naver_key = naver_key, url_2 = url_2, keyword = T, address = F, kakao_key = kakao_key, naver_secret = naver_secret, baselayer ='satellite', overlayer = c("anno_satellite", 'traffic')))
 }
