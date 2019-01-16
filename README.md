@@ -27,10 +27,10 @@ ggmap 패키지의 내부 utility function으로 다른 함수의 내부에서 �
 naver api를 이용한 geocode로 주소와 naver client id와 secret을 입력해줘야 사용가능합니다.
 
 ### geocode_kakao
-kakao api를 이용한 geocode로 주소와 REST API키값을 입력해야 합니다.
+kakao api를 이용한 geocode로 주소와 Kakao REST API키값을 입력해야 합니다.
 
 ### geocode_keyword_kakao
-kakao api를 이용한 geocode이며 주소가 아닌 건물명, 지명으로 검색이 가능합니다. REST API키값을 입력해줘야 사용가능합니다.
+kakao api를 이용한 geocode이며 주소가 아닌 건물명, 지명으로 검색이 가능합니다. Kakao REST API키값을 입력해줘야 사용가능합니다.
 검색의 정확도를 높이기 위해 category_group_code를 입력할 수 있습니다.  
 
 category_group_code  
