@@ -43,5 +43,7 @@ geocode_kakao <- function (address, kakao_key) {
   #결과에서 위경도만 출력
   result <- processed_json$documents[c('y', 'x')]
   colnames(result) <- c('lat', 'lon')
+  result$lat <- as.numeric(result$lat)
+  result$lon <- as.numeric(result$lon)
   result
 }

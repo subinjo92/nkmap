@@ -9,7 +9,7 @@
 \href{https://www.data.go.kr/}{Korea Public Data Portals}
 }
 \usage{
-data(firestation, package = 'nkmap')
+data(firestation)
 }
 \description{
 This data include national firestation address, telephone number, longitude

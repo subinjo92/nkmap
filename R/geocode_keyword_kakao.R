@@ -76,5 +76,7 @@ geocode_keyword_kakao <- function (keyword, kakao_key, category_group_code, lon,
 
   result <- processed_json$documents[, c('place_name', 'x', 'y')]
   colnames(result) <- c('place_name', 'lon', 'lat')
+  result$lat <- as.numeric(result$lat)
+  result$lon <- as.numeric(result$lon)
   result
 }

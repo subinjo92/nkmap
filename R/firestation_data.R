@@ -5,7 +5,7 @@
 #'
 #' @docType data
 #'
-#' @usage data(firestation, package = 'nkmap')
+#' @usage data(firestation)
 #'
 #' @keywords datasets
 #'
