@@ -10,8 +10,9 @@
 #' @param radius you can input this to narrow range and the center of range is lon and lat
 #' @return latitude and longitude
 #' @examples
-#'   geocode_keyword_kakao(keyword = 'keyword', kakao_key = kakao_key, category_group_code = 'SC4')
-#'   geocode_keyword_kakao(keyword = '성균관대학교', kakao_key = kakao_key, lon = 126.99, lat = 37.58, radius = 1000)
+#'   data("firestation")
+#'   geocode_keyword_kakao(keyword = firestation[1, '소방서'], kakao_key = kakao_key, category_group_code = 'PO3')
+#'   geocode_keyword_kakao(keyword = firestation[1, '소방서'], kakao_key = kakao_key, lon = 126.9, lat = 37.57, radius = 1000)
 #' @export
 
 geocode_keyword_kakao <- function (keyword, kakao_key, category_group_code, lon, lat, radius, rect) {
@@ -22,10 +23,10 @@ geocode_keyword_kakao <- function (keyword, kakao_key, category_group_code, lon,
 
   #kakao api가 원하는 url로 encoding
   if (Encoding(keyword) == "UTF-8"){
-    enc_address <- URLencode(keyword)
+    enc_keyword <- URLencode(keyword)
   }
   if (Encoding(keyword) != "UTF-8"){
-    enc_address <- URLencode(iconv(keyword, localeToCharset()[1], to = "UTF-8"))
+    enc_keyword <- URLencode(iconv(keyword, localeToCharset()[1], to = "UTF-8"))
   }
   url <- "https://dapi.kakao.com/v2/local/search/keyword.json?"
 

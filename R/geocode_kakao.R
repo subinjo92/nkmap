@@ -6,7 +6,8 @@
 #' @param kakao_key you must input your KAKAO REST API key
 #' @return longitude and latitude
 #' @examples
-#'   geocode_kakao('address', kakao_key)
+#'   data("firestation")
+#'   geocode_kakao(firestation[1, '주소'], kakao_key)
 #' @export
 
 geocode_kakao <- function (address, kakao_key) {

@@ -9,10 +9,10 @@
 #' @param zoom map zoom, it is 1~14 integer
 #' @param size rectangular dimension in map
 #' @param format image format
-#' @param crs "EPSG:4326" is default
-#' @param baselayer you can select "satelite" or "default"
+#' @param crs Enter the EPSG coordinate system code value. "EPSG:4326" is default
+#' @param baselayer you can select "satellite" or "default". default is general map
 #' @param colors color or black-white
-#' @param overlayer you can use "anno_satellite","bicycle", "roadview", "traffic".
+#' @param overlayer you can use "anno_satellite","bicycle", "roadview", "traffic". It's default to use all of them. anno_satellite is Satellite overlay map (overlapping text, road lines, and icons used for satellite maps), bicycle is bicycle overlay map, roadview is roadview overlay map and traffic is Real-time Traffic Overlay Map
 #' @param markers data.frame with first column longitude, second column latitude, markers displayed in map
 #' @param markers_ab same as markers but it will show alphabets
 #' @param naver_key NAVER api client id
@@ -21,7 +21,7 @@
 #' @param address if you use address then you input TRUE, then you should input keyword FALSE, when you use diameter you should input FALSE for keyword and address
 #' @param kakao_key KAKAO REST api key
 #' @param naver_secret NAVER api client secret
-#' @param category_group_code you can narrow range you can reference code at https://github.com/subinjo92/nkmap
+#' @param category_group_code you can narrow range. you can reference code at https://github.com/subinjo92/nkmap
 #' @param messaging turn messaging on.off
 #' @param urlonly return url only
 #' @param force if the map is on local file, should a new map be looked up or not
@@ -29,9 +29,10 @@
 #' @param archiving use archived maps by changing to TRUE you agree to abide by any of the rules governing caching naver maps
 #' @return NAVER static map
 #' @examples
-#'   ggmap(get_kakao_navermap(center = c(lon = 126, lat = 35), zoom = 3, naver_key = naver_key, url_2 = url_2, keyword = F, address = F, kakao_key = kakao_key, naver_secret = naver_secret, baselayer ='satellite', overlayer = c("anno_satellite", 'traffic')))
-#'   ggmap(get_kakao_navermap(center = 'address', zoom = 10, naver_key = naver_key, keyword = F, address = T, kakao_key = kakao_key, naver_secret = naver_secret, baselayer ='satellite', overlayer = c("anno_satellite", 'traffic')))
-#'   ggmap(get_kakao_navermap(center = 'nomination', zoom = 10, naver_key = naver_key, url_2 = url_2, keyword = T, address = F, kakao_key = kakao_key, naver_secret = naver_secret, baselayer ='satellite', overlayer = c("anno_satellite", 'traffic')))
+#'   data("firestation")
+#'   ggmap(get_kakao_navermap(center = c(lon = 126, lat = 35), zoom = 3, naver_key = naver_key, keyword = F, address = F, kakao_key = kakao_key, naver_secret = naver_secret, overlayer = c("anno_satellite")))
+#'   ggmap(get_kakao_navermap(center = firestation[1, '주소'], zoom = 10, naver_key = naver_key, keyword = F, address = T, kakao_key = kakao_key, naver_secret = naver_secret, baselayer ='satellite', overlayer = c("anno_satellite", 'traffic', 'roadview')))
+#'   ggmap(get_kakao_navermap(center = firestation[1, '소방서'], zoom = 10, naver_key = naver_key, keyword = T, address = F, kakao_key = kakao_key, naver_secret = naver_secret, baselayer ='satellite'))
 #' @export
 
 get_kakao_navermap <- function (center = c(lon = 126.9849208, lat = 37.5664519), zoom = 4,

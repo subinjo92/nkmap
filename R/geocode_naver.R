@@ -7,7 +7,8 @@
 #' @param naver_secret you must input your NAVER client secret
 #' @return longitude and latitude
 #' @examples
-#'   geocode_naver('address', naver_key, naver_secret)
+#'   data("firestation")
+#'   geocode_naver(firestation[1, '주소'], naver_key, naver_secret)
 #' @export
 
 geocode_naver <- function (address, naver_key, naver_secret) {

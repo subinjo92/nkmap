@@ -18,5 +18,6 @@ longitude and latitude
 geocode_kakao function will get longitude and latitude from KAKAO api.
 }
 \examples{
-  geocode_kakao('address', kakao_key)
+  data("firestation")
+  geocode_kakao(firestation[1, '주소'], kakao_key)
 }

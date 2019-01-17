@@ -25,6 +25,7 @@ it will use nomination or building name
 it will narrow range by category_group_code or radius.
 }
 \examples{
-  geocode_keyword_kakao(keyword = 'keyword', kakao_key = kakao_key, category_group_code = 'SC4')
-  geocode_keyword_kakao(keyword = '성균관대학교', kakao_key = kakao_key, lon = 126.99, lat = 37.58, radius = 1000)
+  data("firestation")
+  geocode_keyword_kakao(keyword = firestation[1, '소방서'], kakao_key = kakao_key, category_group_code = 'PO3')
+  geocode_keyword_kakao(keyword = firestation[1, '소방서'], kakao_key = kakao_key, lon = 126.9, lat = 37.57, radius = 1000)
 }

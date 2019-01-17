@@ -20,5 +20,6 @@ longitude and latitude
 geocode_naver function will get longitude and latitude from NAVER api.
 }
 \examples{
-  geocode_naver('address', naver_key, naver_secret)
+  data("firestation")
+  geocode_naver(firestation[1, '주소'], naver_key, naver_secret)
 }
