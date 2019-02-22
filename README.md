@@ -1,5 +1,7 @@
 # nkmap
 
+## 현재 네이버 지도 api가 개발자 사이트에서 클라우드 플랫폼으로 이관됨에 따라 api 주소를 패키지에서 수정하였습니다. 4월 15일까지는 서비스 되어 nkmap 패키지가 작동하나, 이후에는 navermap과 kakaomap 패키지를 이용해주세요.
+
 
 ## get_kakao_navermap
 
